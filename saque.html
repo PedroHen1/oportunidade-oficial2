@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Logo-Wolf-Métodos.png">
+    <script src="https://kit.fontawesome.com/021532d534.js" crossorigin="anonymous"></script>
+    <script src=""></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Códigos Lucrativos</title>
+    <script>
+        $(document).ready(function() {
+             console.log('asd')
+            $('.pix').click(function(){
+                $(this).addClass("active")
+                $(".pix").not(this).removeClass('active')
+            });
+
+            $('.btnModal').click(function(){
+                setTimeout(() => {
+                    $("#modalSuccess").modal('show');
+                    $("#exampleModal").modal('hide');
+
+                }, 5000);
+            });
+
+            
+            var finalValue = 100;
+                var duration = 1000; // Duração da animação em milissegundos (2 segundos neste exemplo)
+                var increment = finalValue / (duration / 100); // Incremento a cada 100ms
+
+                var currentValue = 77;
+                var interval = setInterval(function() {
+                    if (currentValue < finalValue) {
+                        currentValue += increment;
+                        $("#money").text(Math.round(currentValue));
+                    } else {
+                        clearInterval(interval);
+                        $("#money").text(finalValue);
+                    }
+                }, 100);
+        });
+
+    </script>
+</head>
+<body>
+    
+    <header>
+        <img src="./codluc-1.png" alt="">
+        <div>
+            <span>R$</span>
+            <span id="money">77</span>,00
+        </div>
+    </header>
+    <div class="card-grey">
+        Saldo Atualizado
+        
+        <p style="font-size: 15px; margin-bottom: 0px;">REALIZE O SAQUE AGORA.</p>
+    </div>
+    <div class="card">
+        <div class="wrapperContainer"><div class="card-white"><span>Disponível para saque</span><h1>R$ 100,00</h1></div><div class="card-pix"><div class="pix "><img src="./cpf.0ab135a902a8ef1afdd0.png"></div><div class="pix "><img src="/telefone.b4bb77ed880e4d3df14a.png"></div><div class="pix "><img src="email.f037680fd3da1f2f11f8.png"></div><div class="pix "><img src="qr.8db7f1874980d366e0f1.png"></div></div><input type="text" placeholder="Digite sua chave PIX aqui"><input type="number" placeholder="Digite aqui quanto deseja sacar"><button class="btnGreen btnModal" style="font-size: 15px; width: 100%;" data-toggle="modal" data-target="#exampleModal"">REALIZAR SAQUE</button></div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+           
+            <div class="modal-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 30px;">
+              Carregando... 
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+           
+            <div class="modal-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 30px; text-align: center;">
+              <h3>Parabéns!!!</h3> 
+              <img src="./emblemok_103757.png" width="100px" height="100%" alt="">
+                <p style="font-size: 17px; font-weight: bold;">O saque foi realizado com sucesso e estará disponível em breve.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
